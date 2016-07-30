@@ -5,7 +5,7 @@
 #!/usr/bin/python
 
 dragonLoot = ['gold coin', 'dagger', 'ruby', 'ruby', 'gold coin', 'gold coin', 'ruby', 'dagger', 'bomb']
-inv = {'gold coin' : 100, 'arrow' : 3, 'ruby' : 0}
+inv = {'gold coin' : 2301, 'arrow' : 3, 'ruby' : 0}
 
 def displayInventory(inventory):
     print "Inventory : "
