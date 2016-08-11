@@ -7,7 +7,7 @@ import re
 hand = open('data/mbox-short.txt')
 for line in hand:
 	line = line.rstrip()
-	line = re.findall('\S+@\S+', line)
+	line = re.findall('[a-zA-Z0-9]\S*@\S*[a-z,A-Z]', line)
 	if len(line) > 0:
 		print line
 
