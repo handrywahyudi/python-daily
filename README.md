@@ -1,3 +1,3 @@
-# python-everyday
+# python-daily
 
-Repository ini berisi script python yang bisa digunakan sebagai bahan belajar untuk diri sendiri dan orang lain :)
+Just example of python script
