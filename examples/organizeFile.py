@@ -23,20 +23,104 @@ def pickDirectory(value):
     return absolutePath + 'Misc'
 
 
-def organizeDirectory():
+def organizeDirectory(filetype):
     for item in os.scandir():
         if item.is_dir():
             continue
-
         filePath = Path(item)
         fileType = filePath.suffix.lower()
-        directory = pickDirectory(fileType)
-        directoryPath = Path(directory)
+        fileType = filetype.replace('.', '')
 
-        if fileType == '.py':
-            continue
+        if fileType == 'pdf':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
 
-        filePath.rename(directoryPath.joinpath(filePath))
+        if fileType == 'doc':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+           
+        if fileType == 'txt':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'docx':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'zip':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+           
+        if fileType == 'epub':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'dmg':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'iso':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'app':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'exe':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'jpg':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'jpeg':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'mp4':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'mkv':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+           
+        if fileType == 'mp3':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'srt':
+           directory = pickDirectory(fileType) 
+           directoryPath = Path(directory)
+           filePath.rename(directoryPath.joinpath(filePath))
+
+        if fileType == 'all':
+            filePath = Path(item)
+            fileType = filePath.suffix.lower()
+            directory = pickDirectory(fileType)
+            directoryPath = Path(directory)
+
+            if fileType == '.py':
+                continue
+
+            filePath.rename(directoryPath.joinpath(filePath))
 
 
 organizeDirectory()
