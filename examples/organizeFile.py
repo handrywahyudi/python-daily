@@ -123,5 +123,26 @@ def organizeDirectory(filetype):
             filePath.rename(directoryPath.joinpath(filePath))
 
 
-organizeDirectory()
+if __name__ == "__main__":
+    my_parser = argparse.ArgumentParser(prog='organizeFile', usage='%(prog)s [options] FILETYPE', description='Move my files on downloads to their correct folder.')
+    my_parser.add_argument('-t', '--type', type=str, help='Choose of your file type.')
+    args = my_parser.parse_args()
 
+    if args.type == 'pdf':
+        organizeDirectory('pdf')
+    if args.type == 'doc':
+        organizeDirectory('doc')
+    if args.type == 'docx':
+        organizeDirectory('docx')
+    if args.type == 'zip':
+        organizeDirectory('zip')
+    if args.type == 'epub':
+        organizeDirectory('epub')
+    if args.type == 'dmg':
+        organizeDirectory('dmg')
+    if args.type == 'iso':
+        organizeDirectory('iso')
+    if args.type == 'app':
+        organizeDirectory('app')
+    if args.type == 'all':
+        organizeDirectory('all')
